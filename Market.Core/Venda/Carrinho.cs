@@ -23,7 +23,8 @@ namespace Market.Core.Venda
 
         public void ExcluirProduto(Produto produtoASerRemovido)
         {
-            _produtos.Remove(produtoASerRemovido);
+            if (!_produtos.Remove(produtoASerRemovido))
+                throw new ArgumentException("Item não encontrato");
         }
     }
 }
