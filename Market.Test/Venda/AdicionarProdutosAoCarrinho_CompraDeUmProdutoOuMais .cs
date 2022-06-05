@@ -1,9 +1,5 @@
 ﻿using Market.Core.Venda;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Xunit;
 
@@ -14,12 +10,7 @@ namespace Market.Test.Venda
     {
         private Carrinho _carrinho = new();
         private List<Produto> _produtos = new();
-        private readonly ScenarioContext _scenarioContext;
 
-        public AdicionarProdutosAoCarrinho_CompraDeUmProdutoOuMais(ScenarioContext scenarioContext)
-        {
-            _scenarioContext = scenarioContext;
-        }
         [Given(@"que o cliente selecionou um produto ou mais")]
         public void DadoQueOClienteSelecionouUmProdutoOuMais()
         {

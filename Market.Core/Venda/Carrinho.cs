@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace Market.Core.Venda
 {
@@ -14,6 +9,10 @@ namespace Market.Core.Venda
 
         public void AdicionarProduto(Produto produto)
         {
+
+            if (produto.Valor <= 0)
+                throw new ArgumentException("produto com valor inválido");
+
             _produtos.Add(produto);
         }
 
