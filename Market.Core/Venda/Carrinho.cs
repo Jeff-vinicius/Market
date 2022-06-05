@@ -16,9 +16,14 @@ namespace Market.Core.Venda
             _produtos.Add(produto);
         }
 
-        public IList ObterProdutos()
+        public List<Produto> ObterProdutos()
         {
             return _produtos;
+        }
+
+        public void ExcluirProduto(Produto produtoASerRemovido)
+        {
+            _produtos.Remove(produtoASerRemovido);
         }
     }
 }
